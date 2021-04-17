@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import '../Styles/Drawer.css';
-import FileUpload from './FileUpload';
+import FileUpload from './PdfViewer/FileUpload';
 
 function Midway() {
 

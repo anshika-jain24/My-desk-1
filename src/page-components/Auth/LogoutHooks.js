@@ -1,8 +1,8 @@
 import React from 'react';
 import { useGoogleLogout } from 'react-google-login';
 import { useHistory } from "react-router-dom";
-import google from '../assets/images/google.png';
-import '../Styles/Login.css';
+import google from '../../assets/images/google.png';
+import '../../Styles/Login.css';
 
 const clientId =
   '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com';

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Styles/College.css';
-import gif from '../assets/images/Study.gif';
+import '../../Styles/College.css';
+import gif from '../../assets/images/Study.gif';
 import { Link } from 'react-router-dom';
 
 function College() {
