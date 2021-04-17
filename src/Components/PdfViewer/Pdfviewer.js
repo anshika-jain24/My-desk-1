@@ -7,7 +7,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
 import Singlepage from './Singlepage';
-import samplePDF from '../assets/pdf/2K19-SE-012.pdf';
+import samplePDF from '../../assets/pdf/2K19-SE-012.pdf';
 import FileUpload from './FileUpload';
 
 const useStyles = makeStyles((theme) => ({

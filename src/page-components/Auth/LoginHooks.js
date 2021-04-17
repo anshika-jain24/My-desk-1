@@ -2,8 +2,8 @@ import React from 'react';
 import { useGoogleLogin } from 'react-google-login';
 // import { Redirect } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-import google from '../assets/images/google.png';
-import '../Styles/Login.css';
+import google from '../../assets/images/google.png';
+import '../../Styles/Login.css';
 
 // refresh token
 // import { refreshTokenSetup } from '../utils/refreshToken';

@@ -1,8 +1,8 @@
 import { ChatEngine } from 'react-chat-engine';
 
-import ChatFeed from './ChatFeed';
-import LoginForm from './LoginForm';
-import '../Styles/GroupStudying.css';
+import ChatFeed from '../../page-components/GroupStudy/ChatFeed';
+import LoginForm from '../../page-components/GroupStudy/LoginForm';
+import '../../Styles/GroupStudying.css';
 
 const projectID = '83654b11-2e99-46a6-b580-0a1f224e2631';
 

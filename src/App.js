@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
-import './Components/Landing';
-import Landing from './Components/Landing';
-import Login from './Components/Login';
-import Desk from './Components/Desk';
-import FileUpload from './Components/FileUpload';
-import PersonalDrawer from './Components/PersonalDrawer';
-import Midway from './Components/Midway';
-import GroupStudying from './Components/GroupStudying';
-import Pdfviewer from './Components/Pdfviewer';
-import College from './Components/College';
+import './pages/Landing/Landing';
+import Landing from './pages/Landing/Landing';
+import Login from './pages/Auth/Login';
+import Desk from './pages/Desk/Desk';
+import FileUpload from './components/PdfViewer/FileUpload';
+import PersonalDrawer from './pages/Personal/PersonalDrawer';
+import Midway from './components/Midway';
+import GroupStudying from './pages/GroupStudy/GroupStudy';
+import Pdfviewer from './components/PdfViewer/Pdfviewer';
+import College from './pages/College/College';
 
 function App() {
   return (

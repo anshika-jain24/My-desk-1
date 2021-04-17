@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Styles/Login.css';
-import LogoutHooks from './LogoutHooks';
+import '../../Styles/Login.css';
+import LogoutHooks from '../../page-components/Auth/LogoutHooks';
 // import LogoutHooks from './LogoutHooks';
 
 function Logout() {

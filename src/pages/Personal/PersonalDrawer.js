@@ -1,7 +1,7 @@
 import React from 'react';
-import '../Styles/PersonalDrawer.css';
-import gif from '../assets/images/docBg.gif';
-import gif1 from '../assets/images/Medical.gif';
+import '../../Styles/PersonalDrawer.css';
+import gif from '../../assets/images/docBg.gif';
+import gif1 from '../../assets/images/Medical.gif';
 
 function PersonalDrawer() {
     return (

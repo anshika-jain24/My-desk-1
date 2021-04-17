@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import TodoList from './TodoList';
-import Drawer from './Drawer';
+import TodoList from '../../page-components/Desk/Todo/TodoList';
+import Drawer from '../../page-components/Desk/Drawer';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import Clock from 'react-clock';
 import 'react-clock/dist/Clock.css';
-import LogoutHooks from './LogoutHooks';
+import LogoutHooks from '../../page-components/Auth/LogoutHooks';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import '../Styles/Button.css';
+import '../../Styles/Button.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
