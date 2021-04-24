@@ -3,11 +3,11 @@ import './pages/Landing/Landing';
 import Landing from './pages/Landing/Landing';
 import Login from './pages/Auth/Login';
 import Desk from './pages/Desk/Desk';
-import FileUpload from './components/PdfViewer/FileUpload';
+import FileUpload from './Components/PdfViewer/FileUpload';
 import PersonalDrawer from './pages/Personal/PersonalDrawer';
-import Midway from './components/Midway';
+import Midway from './Components/Midway';
 import GroupStudying from './pages/GroupStudy/GroupStudy';
-import Pdfviewer from './components/PdfViewer/Pdfviewer';
+import Pdfviewer from './Components/PdfViewer/Pdfviewer';
 import College from './pages/College/College';
 
 function App() {
