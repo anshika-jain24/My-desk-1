@@ -26,10 +26,10 @@ function LogoutHooks() {
   });
 
   return (
-    <button onClick={signOut} className="button">
-      <img src={google} alt="google login" className="icon"></img>
+    <button onClick={signOut} style={{backgroundColor: 'whitesmoke', border: '0px', color: 'black'}}>
+      {/* <img src={google} alt="google login" className="icon"></img> */}
 
-      <span className="buttonText">Sign out</span>
+      <span style={{fontSize: '18px'}}>Sign Out</span>
     </button>
   );
 }

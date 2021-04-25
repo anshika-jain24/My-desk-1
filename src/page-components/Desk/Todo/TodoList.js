@@ -42,8 +42,8 @@ function TodoList() {
   };
 
   return (
-    <div style={{background: 'blue',padding:'1rem',minHeight:'50.7vh'}}>
-      <h1 className="todoH1">What's the Plan for Today?</h1>
+    <div style={{background: '#333333', minHeight: '50vh', textAlign: 'center', padding: '10px', width: '40vw'}}>
+      <h1 style={{textAlign: 'center'}}>Todo List</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
