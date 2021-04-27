@@ -13,11 +13,13 @@ import { Link } from 'react-router-dom';
 import '../../Styles/Button.css';
 import {Navbar, Nav, NavDropdown, NavItem, Form, FormControl} from 'react-bootstrap'
 
+import "./desk.css";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: 'whitesmoke',
-
+    backgroundColor: '#ffc996',
+    // height: '100%' ffc996
   },
   drawer: {
     padding: theme.spacing(15),
@@ -72,13 +74,16 @@ export default function Desk() {
         <Drawer />
         </div>
       </Grid>
-      {/* <div className="Logout-card">
-        <Link to='/groupstudying'>
-        <Button variant="contained" color="black" size="medium" style={{margin: '3rem', fontSize: '2rem', borderRadius: '5%', backgroundColor: 'white'}}>
-              <span>Group Study</span>
+      <div className="Logout-ca">
+        <Link to='#'>
+        <Button className="hidden"  color="black" size="small" style={{ margin: '2.3rem', fontSize: '0.1px', backgroundColor: '#ffc996'}}>
+              <span className="">Smile</span>
             </Button>
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 }
+
+
+// variant="contained"
