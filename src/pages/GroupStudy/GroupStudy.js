@@ -1,8 +1,7 @@
 import { ChatEngine } from 'react-chat-engine';
-
 import ChatFeed from '../../page-components/GroupStudy/ChatFeed';
 import LoginForm from '../../page-components/GroupStudy/LoginForm';
-import '../../Styles/GroupStudying.css';
+import './styles.css'
 
 const projectID = '83654b11-2e99-46a6-b580-0a1f224e2631';
 
@@ -20,7 +19,5 @@ const GroupStudying = () => {
     />
   );
 };
-
-// infinite scroll, logout, more customizations...
 
 export default GroupStudying;

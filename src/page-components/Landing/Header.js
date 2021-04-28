@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     textAlign: 'center',
+    marginTop: '-10%'
   },
   title: {
     color: '#fff',
@@ -51,6 +52,7 @@ export default function Header() {
   useEffect(() => {
     setChecked(true);
   }, []);
+   
   return (
     <div className={classes.root} id="header">
       <AppBar className={classes.appbar} elevation={0}>
@@ -77,7 +79,7 @@ export default function Header() {
           </h1>
           <p className={classes.para}>Your Virtual Space.</p>
           <Link to='/login'>
-          <Button variant="contained" color="black" size="medium" style={{marginTop: '3rem', fontSize: '2rem', borderRadius: '2%', backgroundColor: '#3cbb25'}}>
+          <Button variant="contained" color="black" size="medium" style={{marginTop: '1rem', fontSize: '2rem', borderRadius: '2%', backgroundColor: '#3cbb25'}}>
             Enter Your Desk
           </Button>
           </Link>
