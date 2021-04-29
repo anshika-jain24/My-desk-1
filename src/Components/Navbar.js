@@ -12,7 +12,7 @@ function NavbarComponenet() {
                 <Nav className="mr-auto">
                 </Nav>
                 <Nav>
-                    <Nav.Item style={{fontSize: '20px', color: 'black', marginRight: '20px', marginTop: '4px'}}>{`${d.getDate()}/${d.getMonth()}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`}</Nav.Item>
+                    <Nav.Item style={{fontSize: '20px', color: 'black', marginRight: '20px', marginTop: '4px'}}>{`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`}</Nav.Item>
                     <Nav.Link href="/groupstudying" style={{marginTop: '6px', color: 'black', fontSize: '18px', marginTop: '1px', marginRight: '10px'}}>
                     Group Study
                     </Nav.Link>

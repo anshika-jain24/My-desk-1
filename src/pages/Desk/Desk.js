@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import TodoList from '../../page-components/Desk/Todo/TodoList';
 import NavbarComponenet from '../../components/Navbar'
+import Calender from '../../page-components/Desk/Calender/Calender'
+import { Button } from 'react-bootstrap'
 import "./styles.css";
 
 function Desk() {
@@ -17,14 +19,18 @@ function Desk() {
     <>
       <NavbarComponenet />
 
-      <Grid style={{width:'100%'}} container spacing={3} style={{fontSize:'191%',width:'100%'}}>
+      <Grid container spacing={5} style={{maxHeight: '70vh', paddingRight: '50px'}}>
         <Grid item xs={12} sm={6} style={{padding:'3rem'}} >
             <TodoList/>
         </Grid>
-        {/* <Grid item xs={12} sm={6} style={{padding:'5rem'}}>
-          <p className="quote_title">The more you think and talk about your goals, the more positive and enthusiastic you become.</p>
-        </Grid> */}
 
+        <Grid item xs={12} sm={1}>
+        </Grid>
+        
+        <Grid item xs={12} sm={5} className="calender_grid">
+          <Button style={{position: 'absolute', right: '14.7%'}}>Open Full Calender</Button>
+          <Calender />
+        </Grid>
       </Grid>
 
       <div className="quote_container">
