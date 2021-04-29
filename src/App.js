@@ -4,6 +4,7 @@ import Login from './pages/Auth/Login';
 import Desk from './pages/Desk/Desk';
 import GroupStudying from './pages/GroupStudy/GroupStudy';
 import College from "./pages/College/College"
+import Personal from './pages/Personal/Personal'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/groupstudying" exact component={GroupStudying} />
           <Route path="/college" exact component={College} />
+          <Route path="/personal" exact component={Personal} />
         </div>
       </Switch>
     </Router>

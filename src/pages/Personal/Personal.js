@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.scss'
-import { COLLEGE_DATA } from '../../data/staticData'
+import { PERSONAL_DATA } from '../../data/staticData'
 
-function College() {
+function Personal() {
     return (
         <div>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-            <h1 className="college_title">{COLLEGE_DATA.mainTitle}</h1>
+            <h1 className="college_title">{PERSONAL_DATA.mainTitle}</h1>
             <div className="content">
-                {COLLEGE_DATA.sections.map(cardData => {
+                {PERSONAL_DATA.sections.map(cardData => {
                     return(
                         <Link className="card_link">
                             <div className="card_college">
@@ -27,4 +27,4 @@ function College() {
     )
 }
 
-export default College
+export default Personal
