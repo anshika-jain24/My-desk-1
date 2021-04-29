@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import TodoList from '../../page-components/Desk/Todo/TodoList';
-import NavbarComponenet from '../../Components/Navbar'
+import NavbarComponenet from '../../components/Navbar'
 import "./styles.css";
 
 export default function Desk() {
