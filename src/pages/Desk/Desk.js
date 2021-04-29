@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import TodoList from '../../page-components/Desk/Todo/TodoList';
 import NavbarComponenet from '../../components/Navbar'
 import "./styles.css";
 
-export default function Desk() {
+function Desk() {
+  const [quoteData, setQuoteData] = useState({});
+
+  useEffect(() => {
+    fetch("https://freequote.herokuapp.com/")
+      .then(res => res.json())
+      .then(res => setQuoteData(res));
+  },[])
+  
   return (
     <>
       <NavbarComponenet />
@@ -19,9 +27,12 @@ export default function Desk() {
 
       </Grid>
 
-      <div>
-        <p className="quote_title">"The more you think and talk about your goals, the more positive and enthusiastic you become."</p>
+      <div className="quote_container">
+        <p className="quote_title">{`"${quoteData.quote}"`}</p>
+        <p className="quote_author">{`-${quoteData.author}`}</p>
       </div>
     </>
   );
 }
+
+export default Desk
