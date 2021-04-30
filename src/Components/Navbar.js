@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import LogoutHooks from '../page-components/Auth/LogoutHooks'
 import {Navbar, Nav} from 'react-bootstrap'
 
 function NavbarComponenet() {
-    const d = new Date();
+    const [d, setd] = useState(new Date());
+    // const d = new Date();
+    useEffect(() => {
+        setd(new Date());
+    })
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="transparant" variant="dark">

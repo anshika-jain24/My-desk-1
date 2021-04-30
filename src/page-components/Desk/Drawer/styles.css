@@ -13,11 +13,11 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 300px;
+    width: 440px;
 }
 .card2:hover {
     height: 450px;
-    width: 300px;
+    width: 440px;
 }
 .card2:hover .cta-container {
     display: inline;
@@ -37,7 +37,7 @@
 .card2:hover h2 small { color: #fff }
 .card2:hover p { margin-top: 300px }
 .card2_circle {
-    background: url('http://lorempixel.com/400/200') no-repeat center bottom;
+    /* background: url('http://lorempixel.com/400/200') no-repeat center bottom; */
     background-color: #3487f7;
     background-size: cover;
     border-radius: 50%;
@@ -45,7 +45,7 @@
     margin-left: -75px;
     margin-top: -270px;
     position: absolute;
-    width: 450px;
+    width: 576px;
 }
 .d-heading {
     color: #3487f7;
@@ -67,6 +67,7 @@
     position: absolute;
     text-align: center;
     z-index: 9999;
+    width: inherit;
 }
 .cta-container {
     display: none;
