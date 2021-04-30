@@ -5,7 +5,8 @@ import Desk from './pages/Desk/Desk';
 import GroupStudying from './pages/GroupStudy/GroupStudy';
 import College from "./pages/College/College"
 import Personal from './pages/Personal/Personal'
-import Assignment from './pages/Assignment/Assignment'
+import Assignment from './pages/Assignment/Assignment';
+import './App.css';
 
 function App() {
   return (

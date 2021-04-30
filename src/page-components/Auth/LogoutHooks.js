@@ -1,6 +1,7 @@
 import React from 'react';
 import { useGoogleLogout } from 'react-google-login';
 import { useHistory } from "react-router-dom";
+import {Button} from "@material-ui/core";
 
 const clientId =
   '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com';
@@ -26,9 +27,9 @@ function LogoutHooks() {
   });
 
   return (
-    <button onClick={signOut}>
+    <Button variant="contained" size="large" style={{backgroundColor: '#9f5f80', color:'white'}} onClick={signOut}>
       <span>Sign Out</span>
-    </button>
+    </Button>
   );
 }
 

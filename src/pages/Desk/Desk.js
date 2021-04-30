@@ -7,7 +7,6 @@ import { Button } from 'react-bootstrap'
 import "./styles.css";
 import Drawer from '../../page-components/Desk/Drawer/Drawer';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Collapse } from '@material-ui/core';
 import img from '../../assets/images/Richie-2.png';
 
 function Desk() {
@@ -21,6 +20,7 @@ function Desk() {
   
   return (
     <>
+      <div>
       <NavbarComponenet />
       <Container className="desk">
       <Row style={{marginBottom: '12rem', justifyContent: 'center'}}>
@@ -51,6 +51,7 @@ function Desk() {
           </Col>
         </Row>
       </Container>
+      </div>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import LogoutHooks from '../page-components/Auth/LogoutHooks'
-import {Navbar, Nav} from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap';
+import {Button} from "@material-ui/core";
 
 function NavbarComponenet() {
     const [d, setd] = useState(new Date());
@@ -17,9 +18,9 @@ function NavbarComponenet() {
                 </Nav>
                 <Nav>
                     <Nav.Item style={{fontSize: '20px', color: 'black', marginRight: '20px', marginTop: '4px'}}>{`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`}</Nav.Item>
-                    <Nav.Link href="/groupstudying" style={{marginTop: '6px', color: 'black', fontSize: '18px', marginTop: '1px', marginRight: '10px'}}>
+                    <Button href="/groupstudying" variant="contained" style={{marginTop: '6px', color: 'black', fontSize: '15px',marginRight: '10px', backgroundColor: '#9f5f80', color: 'white'}}>
                     Group Study
-                    </Nav.Link>
+                    </Button>
                     <Nav.Item style={{marginTop: '6px'}}>
                     <LogoutHooks />
                     </Nav.Item>
