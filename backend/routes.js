@@ -19,10 +19,10 @@ module.exports = function(app, db){
                 let query = `INSERT INTO USERS VALUES('${req.body.name}', '${req.body.email}', '${req.body.googleId}')`;
                 db.query(query, (err, result) => {
                     if(err) throw err;
-                    console.log("User successfully Added!");
+                    res.send("User successfully Added!");
                 });
             }else{
-                console.log("User already exists!")
+                res.send("User already exists!")
             }
         });
     });
