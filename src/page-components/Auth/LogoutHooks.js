@@ -7,13 +7,16 @@ const clientId =
 
 function LogoutHooks() {
   const history = useHistory();
-  const onLogoutSuccess = (res) => {
-    console.log('Logged out Success');
+
+  const onLogoutSuccess = () => {
     history.push("/");
+    localStorage.removeItem("googleUser");
+    localStorage.removeItem("googleEmail");
+    localStorage.removeItem("googleUserId");
   };
 
   const onFailure = () => {
-    console.log('Handle failure cases');
+    alert("Logout Failed! Please try again!");
   };
 
   const { signOut } = useGoogleLogout({
