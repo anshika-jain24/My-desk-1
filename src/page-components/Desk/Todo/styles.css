@@ -1,10 +1,11 @@
 .todo-app {
   width: 520px;
-  min-height: 400px;
+  height: 500px;
   background: #161a2b;
   text-align: center;
   border-radius: 10px;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 .h1_todo {

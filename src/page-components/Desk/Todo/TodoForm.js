@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { addTodo } from '../../../actions/actions';
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
+
+  let email = localStorage.getItem("googleEmail");
 
   const inputRef = useRef(null);
 
@@ -21,6 +24,12 @@ function TodoForm(props) {
       text: input
     });
     setInput('');
+
+    let d = new Date();
+    const dateFull = `${d.getFullYear()}-${d.getMonth()}-${d.getDay()}`;
+    const timeFull = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+
+    addTodo(email, input, dateFull, timeFull);
   };
 
   return (

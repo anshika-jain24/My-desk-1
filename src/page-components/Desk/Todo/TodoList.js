@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
 import './styles.css'
+import { getTodo } from '../../../actions/actions';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
+  const email = localStorage.getItem('googleUser')
+
+  useEffect(() => {
+    const ans = getTodo(email);
+    console.log(ans)
+  }, [])
+
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {

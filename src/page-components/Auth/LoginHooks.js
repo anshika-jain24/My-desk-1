@@ -15,7 +15,6 @@ function LoginHooks() {
     localStorage.setItem("googleUser", res.profileObj.name);
     localStorage.setItem("googleEmail", res.profileObj.email);
     localStorage.setItem("googleUserId", res.profileObj.googleId);
-
     addUser(res.profileObj.name, res.profileObj.email, res.profileObj.googleId);
     history.push("/desk");
   };
