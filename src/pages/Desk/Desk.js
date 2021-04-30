@@ -5,6 +5,7 @@ import NavbarComponenet from '../../components/Navbar'
 import Calender from '../../page-components/Desk/Calender/Calender'
 import { Button } from 'react-bootstrap'
 import "./styles.css";
+import Drawer from '../../page-components/Desk/Drawer/Drawer';
 
 function Desk() {
   const [quoteData, setQuoteData] = useState({});
@@ -32,11 +33,12 @@ function Desk() {
           <Calender />
         </Grid>
       </Grid>
-
       <div className="quote_container">
         <p className="quote_title">{`"${quoteData.quote}"`}</p>
         <p className="quote_author">{`-${quoteData.author}`}</p>
       </div>
+
+      <Drawer />
     </>
   );
 }
