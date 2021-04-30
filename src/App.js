@@ -5,6 +5,7 @@ import Desk from './pages/Desk/Desk';
 import GroupStudying from './pages/GroupStudy/GroupStudy';
 import College from "./pages/College/College"
 import Personal from './pages/Personal/Personal'
+import Assignment from './pages/Assignment/Assignment'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/groupstudying" exact component={GroupStudying} />
           <Route path="/college" exact component={College} />
           <Route path="/personal" exact component={Personal} />
+          <Route path="/assignment" exact component={Assignment} />
         </div>
       </Switch>
     </Router>

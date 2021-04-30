@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import TodoList from '../../page-components/Desk/Todo/TodoList';
-<<<<<<< HEAD
-import NavbarComponenet from '../../Components/Navbar'
-=======
 import NavbarComponenet from '../../components/Navbar'
 import Calender from '../../page-components/Desk/Calender/Calender'
 import { Button } from 'react-bootstrap'
->>>>>>> f7390d8db9d1eca9824a0b2bbb49f356bf77ab2b
 import "./styles.css";
 
 function Desk() {

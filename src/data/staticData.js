@@ -44,3 +44,49 @@ export const PERSONAL_DATA = {
         }
     ]
 }
+
+export const ASSIGNMENT_DATA= {
+    mainTitle: "ASSIGNMENTS",
+    sections: [
+        {
+            icon: "plus",
+            title: "Assignment 1",
+            description: "COA Assignment",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "Assignment 2",
+            description: "COA Assignment",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "Assignment 3",
+            description: "COA Assignment",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "Assignment 4",
+            description: "COA Assignment",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "Assignment 5",
+            description: "COA Assignment",
+            date: "26",
+            month: "January",
+            year: "2021"
+        }
+    ]
+}
