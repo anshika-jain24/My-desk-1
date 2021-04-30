@@ -2,6 +2,7 @@ import React from 'react';
 import { useGoogleLogin } from 'react-google-login';
 import { useHistory } from "react-router-dom";
 import google from '../../assets/images/google.png';
+import { addUser } from '../../actions/actions'
 import './styles.css'
 
 const clientId =
@@ -11,14 +12,17 @@ function LoginHooks() {
   const history = useHistory();
 
   const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
+    localStorage.setItem("googleUser", res.profileObj.name);
+    localStorage.setItem("googleEmail", res.profileObj.email);
+    localStorage.setItem("googleUserId", res.profileObj.googleId);
+
+    addUser(res.profileObj.name, res.profileObj.email, res.profileObj.googleId);
     history.push("/desk");
   };
 
   const onFailure = (res) => {
-    console.log('Login failed: res:', res);
     alert(
-      `Failed to login!`
+      `Failed to login! Please try again!`
     );
   };
 
