@@ -9,6 +9,7 @@ module.exports = function(app, db){
         });
     });
 
+    // POST - Adding users who login through Google
     app.post("/addUser", (req, res) => {
         let query1 = `SELECT * FROM USERS WHERE EMAIL='${req.body.email}'`;
         db.query(query1, (err, result) => {
