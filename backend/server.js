@@ -21,7 +21,8 @@ const db = mysql.createConnection({
 });
 
 //Routes
-require('./routes')(app, db);
+require('./routes/user')(app, db);
+require('./routes/todo')(app, db);
 
 db.connect(function(err) {
   if (err) throw err;

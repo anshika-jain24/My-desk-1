@@ -8,7 +8,7 @@ function NavbarComponenet() {
     // const d = new Date();
     useEffect(() => {
         setd(new Date());
-    })
+    },[])
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="transparant" variant="dark">
