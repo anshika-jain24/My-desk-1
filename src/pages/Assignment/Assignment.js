@@ -21,7 +21,7 @@ function Assignment({type}) {
         {
             setData(TESTS_DATA);
         }
-    }, [])
+    }, [type])
     return (
     Data!=null ? <><div className="row d-flex justify-content-center mt-100 mb-100">
     <div className="col-lg-6">
