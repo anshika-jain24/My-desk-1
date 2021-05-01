@@ -1,8 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import './styles.css';
-import { ASSIGNMENT_DATA } from '../../data/staticData';
-import { PROJECT_DATA } from '../../data/staticData';
-import { TESTS_DATA } from '../../data/staticData';
+import { ASSIGNMENT_DATA, PROJECT_DATA, TESTS_DATA } from '../../data/staticData';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Button from '@material-ui/core/Button';
 
@@ -21,7 +19,8 @@ function Assignment({type}) {
         {
             setData(TESTS_DATA);
         }
-    }, [type])
+    }, [type]);
+    
     return (
     Data!=null ? <><div className="row d-flex justify-content-center mt-100 mb-100">
     <div className="col-lg-6">

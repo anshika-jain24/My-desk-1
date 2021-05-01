@@ -5,25 +5,25 @@ export const COLLEGE_DATA = {
             icon: "face",
             title: "Assignment",
             text: "Click to see or edit your profile page.",
-            link: "/assignment"
+            link: "/college/assignment"
         },
         {
             icon: "face",
             title: "E-Books",
             text: "Click to see or edit your profile page.",
-            link: "/books"
+            link: "/college/books"
         },
         {
             icon: "face",
             title: "Tests",
             text: "Click to see or edit your profile page.",
-            link: "/tests"
+            link: "/college/tests"
         },
         {
             icon: "face",
             title: "Projects",
             text: "Click to see or edit your profile page.",
-            link: "/projects"
+            link: "/college/projects"
         }
     ]
 }
