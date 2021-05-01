@@ -35,19 +35,19 @@ export const PERSONAL_DATA = {
             icon: "face",
             title: "Important Documents",
             text: "Click to see or edit your profile page.",
-            link: "/documents"
+            link: "/personal/documents"
         },
         {
             icon: "face",
             title: "Medical Records",
             text: "Click to see or edit your profile page.",
-            link: "/medical"
+            link: "/personal/medical"
         },
         {
             icon: "face",
             title: "Personal Notes",
             text: "Click to see or edit your profile page.",
-            link: "/notes"
+            link: "/personal/notes"
         }
     ]
 }

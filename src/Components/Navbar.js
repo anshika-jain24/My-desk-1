@@ -4,9 +4,8 @@ import {Navbar, Nav} from 'react-bootstrap';
 import {Button} from "@material-ui/core";
 
 function NavbarComponenet() {
-    const username=localStorage.getItem('displayName');
+    const username=localStorage.getItem('googleUser');
     const [d, setd] = useState(new Date());
-    // const d = new Date();
     useEffect(() => {
         setd(new Date());
     },[])
@@ -16,7 +15,7 @@ function NavbarComponenet() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                <Nav.Item style={{marginLeft: '1rem'}}><span style={{fontSize:'2rem', fontWeight: 'bold'}}>WELCOME </span><span style={{fontSize:'2rem', fontWeight: 'bold'}}>{username.toUpperCase()}</span></Nav.Item>
+                <Nav.Item style={{marginLeft: '1rem'}}><span style={{fontSize:'1.25rem', fontWeight: 'bold'}}>Welcome,</span><span style={{fontSize:'1.25rem', fontWeight: 'bold'}}>{` ${username}!`}</span></Nav.Item>
                 </Nav>
                 <Nav>
                     <Nav.Item style={{fontSize: '20px', color: 'black', marginRight: '20px', marginTop: '4px'}}>{`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`}</Nav.Item>

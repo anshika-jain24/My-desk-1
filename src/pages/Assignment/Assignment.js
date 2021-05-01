@@ -42,20 +42,19 @@ function Assignment({type}) {
             </div>
             <div>
                 <div className="upload">
-                    <input
-                        accept=""
-                        className="input"
-                        id="contained-button-file"
-                        multiple
-                        type="file"
-                    />
-                    <label htmlFor="contained-button-file">
-                        <Button size="large" variant="contained" color="primary" component="span">
-                        Upload
-                        </Button>
-                    </label>
+                    <form className="form">
+                        <input
+                            id="fileInput"
+                            type="file"
+                            name="image"
+                            className="form-input"
+                        />
+                        <button className="btn_upload" type="submit">
+                            Upload
+                        </button>
+                    </form>
                 </div>
-        </div>
+            </div>
             <ul className="list-style-none">
                 { Data.sections.map( assignmentdata => {
                     return(
