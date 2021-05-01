@@ -9,6 +9,11 @@ import Assignment from './pages/Assignment/Assignment';
 import MainCalender from './pages/MainCalender/MainCalender'
 
 function App() {
+  const Assignment1 = ({match}) => {
+    return(
+      <Assignment type={match.params.type} />
+    );
+  }
   return (
     <Router>
       <Switch>
@@ -19,7 +24,7 @@ function App() {
           <Route path="/groupstudying" exact component={GroupStudying} />
           <Route path="/college" exact component={College} />
           <Route path="/personal" exact component={Personal} />
-          <Route path="/assignment" exact component={Assignment} />
+          <Route path="/:type" exact component={Assignment1} />
           <Route path="/fullcalender" exact component={MainCalender} />
         </div>
       </Switch>
