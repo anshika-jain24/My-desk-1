@@ -155,7 +155,53 @@ export const TESTS_DATA= {
         {
             icon: "plus",
             title: "Discrete ST-1",
-            description: "SUrprise test",
+            description: "Surprise test",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "SE CT-2",
+            description: "Class test",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "Digital CT-1",
+            description: "Class test",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "Digital CT-2",
+            description: "Class test",
+            date: "26",
+            month: "January",
+            year: "2021"
+        }
+    ]
+}
+
+export const X_DATA= {
+    mainTitle: "TESTS",
+    sections: [
+        {
+            icon: "plus",
+            title: "SE CT-1",
+            description: "Class test-1",
+            date: "26",
+            month: "January",
+            year: "2021"
+        },
+        {
+            icon: "plus",
+            title: "Discrete ST-1",
+            description: "Surprise test",
             date: "26",
             month: "January",
             year: "2021"
