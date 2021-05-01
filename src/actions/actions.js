@@ -47,3 +47,30 @@ export const checkTodo = async (email, todoName, todoStatus) => {
   .then(res => res.data)
   .catch(err => Promise.reject(err));
 }
+
+export const addEvent = async (email, id, title, start, end) => {
+  return await axios
+  .post(`http://localhost:4000/addEvent`, 
+  { email, 
+    id, 
+    title, 
+    start, 
+    end
+  })
+  .then(res => res.data)
+  .catch(err => Promise.reject(err));
+}
+
+export const deleteEvent = async (email, id) => {
+  return await axios
+  .delete(`http://localhost:4000/deleteEvent/${email}/${id}`)
+  .then(res => res.data)
+  .catch(err => Promise.reject(err));
+}
+
+export const getEvents = async (email) => {
+  return await axios
+  .get(`http://localhost:4000/getEvents/${email}`)
+  .then(res => res.data)
+  .catch(err => Promise.reject(err));
+}

@@ -3,17 +3,22 @@ import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import { INITIAL_EVENTS, createEventId } from './event-utils'
+import { INITIAL_EVENTS } from './event-utils'
+import uniqid from 'uniqid'
+import { addEvent, deleteEvent, getEvents } from '../../actions/actions'
 import './styles.css'
 
 export default class MainCalender extends React.Component {
-
-  state = {
-    weekendsVisible: true,
-    currentEvents: []
+  constructor() {
+    super();
+    this.state = {
+      weekendsVisible: true,
+      currentEvents: []
+    }
   }
 
   render() {
+    const email = localStorage.getItem('googleEmail');
     return (
       <div className='demo-app'>
         {this.renderSidebar()}
@@ -37,10 +42,14 @@ export default class MainCalender extends React.Component {
             eventClick={this.handleEventClick}
             eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
             /* you can update a remote database when these fire:
-            eventAdd={function(){}}
+            
             eventChange={function(){}}
             eventRemove={function(){}}
             */
+            eventAdd={() => {
+              const newEvent = JSON.parse(JSON.stringify(this.state.currentEvents[this.state.currentEvents.length - 1]));
+              addEvent(email, newEvent.id, newEvent.title, newEvent.start, newEvent.end);
+            }}
           />
         </div>
       </div>
@@ -92,7 +101,7 @@ export default class MainCalender extends React.Component {
 
     if (title) {
       calendarApi.addEvent({
-        id: createEventId(),
+        id: uniqid(),
         title,
         start: selectInfo.startStr,
         end: selectInfo.endStr,
@@ -102,7 +111,9 @@ export default class MainCalender extends React.Component {
   }
 
   handleEventClick = (clickInfo) => {
+    const email = localStorage.getItem('googleEmail');
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      deleteEvent(email, clickInfo.event.id)
       clickInfo.event.remove()
     }
   }

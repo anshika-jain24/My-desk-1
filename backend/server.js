@@ -23,6 +23,7 @@ const db = mysql.createConnection({
 //Routes
 require('./routes/user')(app, db);
 require('./routes/todo')(app, db);
+require('./routes/calender')(app, db);
 
 db.connect(function(err) {
   if (err) throw err;
