@@ -11,7 +11,7 @@ function Personal() {
             <div className="content">
                 {PERSONAL_DATA.sections.map(cardData => {
                     return(
-                        <Link className="card_link">
+                        <Link to={cardData.link} className="card_link">
                             <div className="card_college">
                                 <div className="icon"><i className="material-icons md-36">{cardData.icon}</i></div>
                                 <p className="title">{cardData.title}</p>

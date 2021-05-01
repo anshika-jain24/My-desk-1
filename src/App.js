@@ -23,8 +23,9 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/groupstudying" exact component={GroupStudying} />
           <Route path="/college" exact component={College} />
-          <Route path="/personal" exact component={Personal} />
           <Route path="/college/:type" exact component={Assignment1} />
+          <Route path="/personal" exact component={Personal} />
+          <Route path="/personal/:type" exact component={Assignment1} />
           <Route path="/fullcalender" exact component={MainCalender} />
         </div>
       </Switch>

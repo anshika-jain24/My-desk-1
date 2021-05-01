@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import './styles.css';
-import { ASSIGNMENT_DATA, PROJECT_DATA, TESTS_DATA } from '../../data/staticData';
+import { ASSIGNMENT_DATA, PROJECT_DATA, TESTS_DATA, MEDICAL_DATA, DOCUMENT_DATA, NOTES_DATA } from '../../data/staticData';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Button from '@material-ui/core/Button';
 
@@ -18,6 +18,18 @@ function Assignment({type}) {
         else if(type=="tests")
         {
             setData(TESTS_DATA);
+        }
+        else if(type=="medical")
+        {
+            setData(MEDICAL_DATA);
+        }
+        else if(type=="documents")
+        {
+            setData(DOCUMENT_DATA);
+        }
+        else if(type=="notes")
+        {
+            setData(NOTES_DATA);
         }
     }, [type]);
     
