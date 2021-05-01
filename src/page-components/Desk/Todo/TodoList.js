@@ -2,17 +2,23 @@ import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
 import './styles.css'
-import { getTodo } from '../../../actions/actions';
+import { checkTodo, deleteTodo, getTodos } from '../../../actions/actions';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
-  const email = localStorage.getItem('googleUser')
+  const email = localStorage.getItem('googleEmail')
 
   useEffect(() => {
-    const ans = getTodo(email);
-    console.log(ans)
-  }, [])
+    getTodos(email).then(res => {
+      let arr = [];
+      for(let i = 0 ; i < res.length ; i++){
+        arr.push({text: res[i].TodoName, isComplete: res[i].Status});
+      }
 
+      setTodos(arr);
+      console.log(todos)
+    });
+  }, [])
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -20,32 +26,33 @@ function TodoList() {
     }
 
     const newTodos = [todo, ...todos];
-
     setTodos(newTodos);
-    console.log(...todos);
   };
 
-  const updateTodo = (todoId, newValue) => {
+  const updateTodo = (todoText, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
     }
-
-    setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
+    deleteTodo(email, todoText);
+    setTodos(prev => prev.map(item => (item.text === todoText ? newValue : item)));
   };
 
-  const removeTodo = id => {
-    const removedArr = [...todos].filter(todo => todo.id !== id);
-
+  const removeTodo = name => {
+    const removedArr = [...todos].filter(todo => todo.text !== name);
+    deleteTodo(email, name);
     setTodos(removedArr);
   };
 
-  const completeTodo = id => {
+  const completeTodo = name => {
     let updatedTodos = todos.map(todo => {
-      if (todo.id === id) {
+      if (todo.text === name) {
         todo.isComplete = !todo.isComplete;
+        let c = todo.isComplete? 1:0;
+        checkTodo(email, name, c);
       }
       return todo;
     });
+    
     setTodos(updatedTodos);
   };
 

@@ -26,7 +26,7 @@ function TodoForm(props) {
     setInput('');
 
     let d = new Date();
-    const dateFull = `${d.getFullYear()}-${d.getMonth()}-${d.getDay()}`;
+    const dateFull = `${d.getFullYear()}-${d.getMonth()+1}-${d.getUTCDate()}`;
     const timeFull = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
 
     addTodo(email, input, dateFull, timeFull);
@@ -58,7 +58,7 @@ function TodoForm(props) {
             className='todo-input'
             ref={inputRef}
           />
-          <button onClick={handleSubmit} className='todo-button'>
+          <button onClick={() => handleSubmit} className='todo-button'>
             Add todo
           </button>
         </>
