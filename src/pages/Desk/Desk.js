@@ -38,7 +38,7 @@ function Desk() {
       </Row>
         <Row style={{marginBottom:'9rem'}}>
           <Col>
-            <Drawer />
+            <Drawer title="College" desc="Place to find all your college related stuff." link="/college" />
           </Col>
           <Col>
           <div className="quote_container">
@@ -47,7 +47,7 @@ function Desk() {
           </div>
           </Col>
           <Col>
-            <Drawer />
+            <Drawer title="Personal" desc="Place to find all your personal stuff." link="/personal" />
           </Col>
         </Row>
       </Container>
