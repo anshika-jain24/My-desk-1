@@ -6,6 +6,7 @@ import GroupStudying from './pages/GroupStudy/GroupStudy';
 import College from "./pages/College/College"
 import Personal from './pages/Personal/Personal'
 import Assignment from './pages/Assignment/Assignment';
+import MainCalender from './pages/MainCalender/MainCalender'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/college" exact component={College} />
           <Route path="/personal" exact component={Personal} />
           <Route path="/assignment" exact component={Assignment} />
+          <Route path="/fullcalender" exact component={MainCalender} />
         </div>
       </Switch>
     </Router>

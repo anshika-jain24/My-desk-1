@@ -10,8 +10,16 @@ function Calender() {
           initialView="dayGridMonth"
           weekends={true}
           events={[
-            { title: 'Project Submission', date: '2021-04-30' },
-            { title: 'CT-2', date: '2021-04-29' }
+            {
+              title: "Event 1",
+              start: "2021-05-05T09:00:00",
+              end: "2021-05-05T18:00:00"
+            },
+            {
+              title: "Event 2",
+              start: "2021-05-08",
+              end: "2021-05-10"
+            }
           ]}
         />
       </>

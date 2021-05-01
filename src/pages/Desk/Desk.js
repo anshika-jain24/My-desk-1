@@ -32,7 +32,7 @@ function Desk() {
           <img src={img} />
         </Col>
         <Col spacing={5} xs={12} sm={5} className="calender_grid">
-          <Button style={{position: 'absolute', right: '25.7%'}}>Open Full Calender</Button>
+          <Button style={{position: 'absolute', right: '30.7%'}} href="/fullcalender">Open Full Calender</Button>
           <Calender />
         </Col>
       </Row>
