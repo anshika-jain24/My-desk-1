@@ -16,7 +16,7 @@ function NavbarComponenet() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                <Nav.Item><span className="welcome">WELCOME </span><span className="name">{username}</span></Nav.Item>
+                <Nav.Item style={{marginLeft: '1rem'}}><span style={{fontSize:'2rem', fontWeight: 'bold'}}>WELCOME </span><span style={{fontSize:'2rem', fontWeight: 'bold'}}>{username.toUpperCase()}</span></Nav.Item>
                 </Nav>
                 <Nav>
                     <Nav.Item style={{fontSize: '20px', color: 'black', marginRight: '20px', marginTop: '4px'}}>{`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`}</Nav.Item>
