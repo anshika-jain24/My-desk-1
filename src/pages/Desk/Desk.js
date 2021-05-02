@@ -24,7 +24,7 @@ function Desk() {
       <NavbarComponenet />
       <Container className="desk">
       <Row style={{marginBottom: '12rem', justifyContent: 'center'}}>
-      <Col style={{maxHeight: '70vh', padding: '93px', maxWidth: '670px'}}>
+      <Col style={{maxHeight: '70vh', paddingTop: '2%',paddingLeft: '3%' , maxWidth: '670px'}}>
         {/* <Grid item xs={12} sm={6} style={{padding:'3rem'}} > */}
             <TodoList/>
         </Col>

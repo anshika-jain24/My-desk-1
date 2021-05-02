@@ -74,3 +74,31 @@ export const getEvents = async (email) => {
   .then(res => res.data)
   .catch(err => Promise.reject(err));
 }
+
+export const uploadFile = async (email, data, name, date, type) => {
+  return await axios
+  .post(`http://localhost:4000/uploadFile`, {
+    headers: { 'Content-Type': 'application/json' },
+    email,
+    data,
+    name,
+    date,
+    type
+  })
+  .then(res => res.data)
+  .catch(err => Promise.reject(err));
+}
+
+export const getFiles = async (email, type) => {
+  return await axios
+  .get(`http://localhost:4000/getFiles/${email}/${type}`)
+  .then(res => res.data)
+  .catch(err => Promise.reject(err));
+}
+
+export const deleteFile = async (email, id) => {
+  return await axios
+  .delete(`http://localhost:4000/deleteFile/${email}/${id}`)
+  .then(res => res.data)
+  .catch(err => Promise.reject(err));
+}
