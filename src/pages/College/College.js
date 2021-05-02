@@ -4,6 +4,9 @@ import './styles.scss'
 import { COLLEGE_DATA } from '../../data/staticData'
 
 function College() {
+    const email = localStorage.getItem('googleEmail')
+
+    if(email){
     return (
         <div>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -25,6 +28,9 @@ function College() {
 
 
     )
+}else{
+    window.location.href = "/login";
+}
 }
 
 export default College

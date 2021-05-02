@@ -19,6 +19,7 @@ export default class MainCalender extends React.Component {
 
   render() {
     const email = localStorage.getItem('googleEmail');
+    if(email){
     return (
       <div className='demo-app'>
         {this.renderSidebar()}
@@ -54,7 +55,10 @@ export default class MainCalender extends React.Component {
         </div>
       </div>
     )
+  }else{
+    window.location.href = "/login";
   }
+}
 
   renderSidebar() {
     return (

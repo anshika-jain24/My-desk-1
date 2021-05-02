@@ -11,6 +11,7 @@ import img from '../../assets/images/Richie-2.png';
 
 function Desk() {
   const [quoteData, setQuoteData] = useState({});
+  const email = localStorage.getItem('googleEmail')
 
   useEffect(() => {
     fetch("https://freequote.herokuapp.com/")
@@ -18,6 +19,8 @@ function Desk() {
       .then(res => setQuoteData(res));
   },[])
   
+
+  if(email){
   return (
     <>
       <div>
@@ -54,6 +57,10 @@ function Desk() {
       </div>
     </>
   );
+}else{
+  window.location.href = "/login"
+}
+
 }
 
 export default Desk

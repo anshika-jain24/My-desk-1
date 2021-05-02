@@ -37,7 +37,7 @@ function Assignment({type}) {
             uploadImage(reader.result, selectedFile.name);
         };
     };
-    
+    if(email){
     return (
     Data!=null ? <><div className="row d-flex justify-content-center mt-100 mb-100">
     <div className="col-lg-7">
@@ -86,6 +86,9 @@ function Assignment({type}) {
 </div>
 </div></>:<></>
     )
+}else{
+    window.location.href = "/login"
+}
 }
 
 export default Assignment
