@@ -26,7 +26,7 @@ module.exports = function(app, db){
             if(err) throw err;
             res.send("Succesfully deleted!");
         });
-    })
+    });
 
     // PUT - To change the Status
     app.put("/checkTodo", (req, res) => {
