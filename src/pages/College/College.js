@@ -14,11 +14,11 @@ function College() {
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
             <Container>
                 <Row>
-                    <Col xs={12} sm={6}><h1 className="college_title">COLLEGE SPACE</h1></Col>
-                    <Col xs={12} sm={6}><image src={img} /></Col>
+                    <Col xs={12} sm={6}><h1 style={{marginTop: '12rem', fontSize: '4rem', marginLeft: '2rem', fontWeight: 'bold'}} className="college_title">COLLEGE SPACE</h1></Col>
+                    <Col xs={12} sm={6}><img style={{marginLeft: '2rem'}} src={img} /></Col>
                 </Row>
             </Container>
-            <div className="content">
+            <div style={{ padding: '0'}} className="content">
                 {COLLEGE_DATA.sections.map(cardData => {
                     return(
                         <Link to={cardData.link} className="card_link">
