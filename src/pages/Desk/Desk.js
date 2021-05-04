@@ -23,7 +23,7 @@ function Desk() {
   if(email){
   return (
     <>
-      <div>
+      <div style={{ backgroundColor: '#ecf3f3', height: '100%', paddingBottom: '2rem'}}>
       <NavbarComponenet />
       <Container className="desk">
       <Row style={{marginBottom: '12rem', justifyContent: 'center'}}>

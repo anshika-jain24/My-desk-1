@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 import './styles.scss'
-import { COLLEGE_DATA } from '../../data/staticData'
+import { COLLEGE_DATA } from '../../data/staticData';
+import img from '../../assets/images/CollegeStudent.png';
 
 function College() {
     const email = localStorage.getItem('googleEmail')
@@ -10,7 +12,12 @@ function College() {
     return (
         <div>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-            <h1 className="college_title">{COLLEGE_DATA.mainTitle}</h1>
+            <Container>
+                <Row>
+                    <Col xs={12} sm={6}><h1 className="college_title">COLLEGE SPACE</h1></Col>
+                    <Col xs={12} sm={6}><image src={img} /></Col>
+                </Row>
+            </Container>
             <div className="content">
                 {COLLEGE_DATA.sections.map(cardData => {
                     return(
