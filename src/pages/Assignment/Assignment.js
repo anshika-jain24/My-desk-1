@@ -43,7 +43,7 @@ function Assignment({type}) {
     <div className="col-lg-7">
         <div className="card1">
             <div className="card1-body text-center">
-                <h4 className="card1-title mb-5">{type}</h4>
+                <h4 className="card1-title mb-5">{type.toUpperCase()}</h4>
             </div>
             <div>
                 <div className="upload">
